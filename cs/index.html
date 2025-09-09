@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Hub - UP Polytechnic CS</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Dark Mode Toggle -->
+    <button id="darkModeToggle"><i class="fas fa-moon"></i></button>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <h1><i class="fas fa-laptop-code"></i> STUDY GROUP</h1>
+        <p>UP Polytechnic Computer Science - One-Stop Learning Portal</p>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="container">
+        <button class="nav-toggle" aria-label="Toggle Navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links">
+          <a href="/index.html"><i class="fas fa-home"></i> Home</a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle">
+              <i class="fas fa-book"></i> Books
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="BOOKS/index.html"
+                ><i class="fas fa-book-open"></i> Semester Books</a
+              >
+
+              <a href="#"><i class="fas fa-code"></i> Programming language </a>
+              <a href="#"><i class="fas fa-shield-alt"></i> Hacking</a>
+              <a href="#"><i class="fas fa-network-wired"></i> Networking</a>
+            </div>
+          </div>
+          <a href="notes/SEMSTER/COMPUTER.html"
+            ><i class="fas fa-book"></i> Notes</a
+          >
+          <a href="#"><i class="fas fa-flask"></i> Practicals</a>
+          <a href="previous year question/index.html"
+            ><i class="fas fa-file-alt"></i>previous year Papers</a
+          >
+          <a href="projects/index.html"
+            ><i class="fas fa-project-diagram"></i> Projects</a
+          >
+          <a href="Syllbus.pdf"
+            ><i class="fas fa-chalkboard-teacher"></i> Syllabus</a
+          >
+          <a href="#"><i class="fas fa-question-circle"></i> Q&A</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <div class="container">
+        <input type="text" placeholder="Search notes, practicals, papers..." />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h2>Everything for Diploma in Computer Science</h2>
+        <div class="hero-features">
+          <span
+            ><i class="fas fa-check-circle"></i> 1st to 6th Semester Notes</span
+          >
+          <span
+            ><i class="fas fa-check-circle"></i> Lab Manuals & Programs</span
+          >
+          <span><i class="fas fa-check-circle"></i> Previous Year Papers</span>
+        </div>
+        <button class="cta-button">
+          Explore Resources <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="quick-links">
+      <div class="container">
+        <div class="link-box">
+          <h3><i class="fas fa-bolt"></i> Quick Access</h3>
+          <a href="#">1st Sem Notes</a>
+          <a href="#">C Programming Lab</a>
+          <a href="#">2023 Question Papers</a>
+          <a href="#">Python Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Features -->
+    <section class="features">
+      <div class="container">
+        <a href="notes/SEMSTER/COMPUTER.html" class="feature-card">
+          <i class="fas fa-book-open"></i>
+          <h3>Semester-wise Notes</h3>
+          <p>Complete PDF notes for all subjects</p>
+        </a>
+        <a href="#" class="feature-card">
+          <i class="fas fa-code"></i>
+          <h3>Lab Programs</h3>
+          <p>C, C++, Java, Python, DBMS</p>
+        </a>
+        <a href="previous year question/index.html" class="feature-card">
+          <i class="fas fa-file-pdf"></i>
+          <h3>Solved Papers</h3>
+          <p>2019-2026 exam papers with solutions</p>
+        </a>
+        <a href="#" class="feature-card">
+          <i class="fas fa-video"></i>
+          <h3>Video Tutorials</h3>
+          <p>Practical demonstrations</p>
+        </a>
+        <a href="#" class="feature-card">
+          <i class="fas fa-compass"></i>
+          <h3>Career Guidance</h3>
+          <p>Expert advice for your tech career path</p>
+        </a>
+        <a href="https://t.me/studygroupmaterialbot" class="feature-card">
+          <i class="fas fa-headset"></i>
+          <h3>24/7 Support</h3>
+          <p>Get help anytime via WhatsApp/Telegram bot</p>
+        </a>
+        <a href="courese/courses.html" class="feature-card">
+          <i class="fas fa-sitemap"></i>
+          <h3>DSA Course</h3>
+          <p>Data Structures & Algorithms tutorials</p>
+        </a>
+        <a href="courese/courses.html" class="feature-card">
+          <i class="fas fa-globe"></i>
+          <h3>Web Development</h3>
+          <p>HTML, CSS, JavaScript & modern frameworks</p>
+        </a>
+        <a href="QUIZ/index.html" class="feature-card">
+          <i class="fas fa-question-circle"></i>
+          <h3>Quiz Section</h3>
+          <p>Test your knowledge with interactive quizzes</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Admin Team Section -->
+    <section class="admin-team">
+      <div class="container">
+        <h2><i class="fas fa-users"></i> Our Admin Team</h2>
+        <div class="team-cards">
+          <div class="team-card">
+            <div class="member-photo">
+              <img src="srhacker.jpg" alt="Admin Member 1" />
+            </div>
+            <h3>SR HACKER</h3>
+            <p>Lead Developer & Content Creator</p>
+            <div class="social-links">
+              <a href="https://wa.me/message/GQLDDOIWQVZUJ1"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a href="https://t.me/study_group20"
+                ><i class="fab fa-telegram"></i
+              ></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+              <a
+                href="https://www.linkedin.com/in/premjeet-37804a2a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+          <div class="team-card">
+            <div class="member-photo">
+              <img src="shivam.jpg" alt="Admin Member 2" />
+            </div>
+            <h3>SHIVAM</h3>
+            <p>Technical Support & Mentor</p>
+            <div class="social-links">
+              <a href="https://wa.me/7524933628"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a href="http://t.me/its_shivam_up92"
+                ><i class="fab fa-telegram"></i
+              ></a>
+              <a href="https://www.instagram.com/its__shivam__up92"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/shivam-jatav-90788031b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+          <div class="team-card">
+            <div class="member-photo">
+              <img src="card.jpeg" alt="Admin Member 3" />
+            </div>
+            <h3>new admin</h3>
+            <p>Study Material Coordinator</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-telegram"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Media Join Buttons -->
+    <section class="social-join">
+      <div class="container">
+        <div class="join-button whatsapp">
+          <i class="fab fa-whatsapp"></i> WhatsApp Group
+          <a href="#" class="join-now">Join Now</a>
+        </div>
+        <div class="join-button telegram">
+          <i class="fab fa-telegram"></i> Telegram Group
+          <a href="#" class="join-now">Join Now</a>
+        </div>
+        <div class="join-button telegram">
+          <i class="fab fa-telegram"></i> Telegram channel
+          <a href="#" class="join-now">Join Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notice Board -->
+    <section class="notice-board">
+      <div class="container">
+        <h2><i class="fas fa-bullhorn"></i> Updates</h2>
+        <div class="notice">
+          <p><strong>New:</strong> 5th Sem OS Notes Updated (May 2025)</p>
+          <p><strong>Alert:</strong> Semester Exam Dates Released</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-section">
+          <h3>Study Hub</h3>
+          <p>For UP Polytechnic Computer Science Students</p>
+        </div>
+        <div class="footer-section">
+          <h3>Important Links</h3>
+          <a href="https://bteup.ac.in/webapp/SYLLABUS.aspx?type=18 "
+            >BTEUP Syllabus</a
+          >
+          <a href="#">Results</a>
+          <a href="#">Exam Schedule</a>
+        </div>
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <a
+            href=" https://chat.whatsapp.com/D5X6oFoGxqLAaPlGdrVQ6n?mode=ems_copy_t"
+            ><i class="fab fa-whatsapp"></i> WhatsApp</a
+          >
+          <a href="https://t.me/study_group20"
+            ><i class="fab fa-telegram"></i> Telegram</a
+          >
+          <a href="https://youtube.com/@studygroup1918?si=gV1DqO22FnrOnGsl"
+            ><i class="fab fa-youtube"></i> YouTube</a
+          >
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2026 Study group | Made for SR HACKER</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

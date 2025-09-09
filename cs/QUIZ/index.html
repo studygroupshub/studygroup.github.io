@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Hub - Study Group</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="quiz.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <button id="darkModeToggle"><i class="fas fa-moon"></i></button>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1><i class="fas fa-question-circle"></i> QUIZ HUB</h1>
+            <p>Test Your Knowledge - Practice Makes Perfect!</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <button class="nav-toggle" aria-label="Toggle Navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links">
+                <a href="../index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="#" class="active"><i class="fas fa-question-circle"></i> Quiz</a>
+                <a href="../courese/courses.html"><i class="fas fa-graduation-cap"></i> Courses</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h2>🎯 Test Your Knowledge</h2>
+                <p class="hero-subtitle">Practice with our comprehensive quiz collection</p>
+                <p class="hero-description">Choose your subject and start practicing!</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <i class="fas fa-users"></i>
+                        <span>1000+ Students</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-question-circle"></i>
+                        <span>500+ Questions</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-trophy"></i>
+                        <span>5 Subjects</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Categories -->
+    <section class="quiz-categories">
+        <div class="container">
+            <h2 class="section-title">Choose Your Subject</h2>
+            <div class="categories-grid">
+                <!-- DBMS Quiz -->
+                <a href="dbms.html" class="quiz-category">
+                    <div class="category-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database Management System</h3>
+                    <p>Test your knowledge of SQL, normalization, and database concepts</p>
+                    <div class="category-stats">
+                        <span><i class="fas fa-question"></i> 50 Questions</span>
+                        <span><i class="fas fa-clock"></i> 30 Min</span>
+                    </div>
+                    <div class="start-btn">
+                        <i class="fas fa-play"></i> Start Quiz
+                    </div>
+                </a>
+
+                <!-- DSA Quiz -->
+                <a href="dsa.html" class="quiz-category">
+                    <div class="category-icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h3>Data Structures & Algorithms</h3>
+                    <p>Practice arrays, linked lists, trees, graphs, and algorithms</p>
+                    <div class="category-stats">
+                        <span><i class="fas fa-question"></i> 60 Questions</span>
+                        <span><i class="fas fa-clock"></i> 45 Min</span>
+                    </div>
+                    <div class="start-btn">
+                        <i class="fas fa-play"></i> Start Quiz
+                    </div>
+                </a>
+
+                <!-- Operating System Quiz -->
+                <a href="os.html" class="quiz-category">
+                    <div class="category-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>Operating System</h3>
+                    <p>Test process management, memory management, and file systems</p>
+                    <div class="category-stats">
+                        <span><i class="fas fa-question"></i> 40 Questions</span>
+                        <span><i class="fas fa-clock"></i> 25 Min</span>
+                    </div>
+                    <div class="start-btn">
+                        <i class="fas fa-play"></i> Start Quiz
+                    </div>
+                </a>
+
+                <!-- OOPS Quiz -->
+                <a href="oops.html" class="quiz-category">
+                    <div class="category-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>Object Oriented Programming</h3>
+                    <p>Practice inheritance, polymorphism, encapsulation, and abstraction</p>
+                    <div class="category-stats">
+                        <span><i class="fas fa-question"></i> 45 Questions</span>
+                        <span><i class="fas fa-clock"></i> 30 Min</span>
+                    </div>
+                    <div class="start-btn">
+                        <i class="fas fa-play"></i> Start Quiz
+                    </div>
+                </a>
+
+                <!-- Aptitude Quiz -->
+                <a href="aptitude.html" class="quiz-category">
+                    <div class="category-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Aptitude</h3>
+                    <p>Logical reasoning, quantitative aptitude, and verbal ability</p>
+                    <div class="category-stats">
+                        <span><i class="fas fa-question"></i> 35 Questions</span>
+                        <span><i class="fas fa-clock"></i> 20 Min</span>
+                    </div>
+                    <div class="start-btn">
+                        <i class="fas fa-play"></i> Start Quiz
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Why Practice with Our Quizzes?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Track Progress</h3>
+                    <p>Monitor your performance and see improvement over time</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Instant Feedback</h3>
+                    <p>Get immediate explanations for correct and incorrect answers</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile Friendly</h3>
+                    <p>Practice anywhere, anytime on any device</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-redo"></i>
+                    <h3>Unlimited Attempts</h3>
+                    <p>Practice as many times as you want to master the concepts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <h3>Study Hub</h3>
+                <p>Your Gateway to Success in Computer Science</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="../index.html">Home</a>
+                <a href="../courese/courses.html">Courses</a>
+                <a href="../notes/SEMSTER/COMPUTER.html">Notes</a>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <a href="https://t.me/itcoursessall"><i class="fab fa-telegram"></i> Telegram</a>
+                <a href="tel:+919876543210"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Study Hub | Quiz Platform</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diploma in Electronics Engineering</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="bg-gray-100">
+    <!-- Header Section -->
+    <header class="bg-white shadow-md sticky top-0 z-40">
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-xl md:text-2xl font-bold text-gray-800"
+          >Diploma in Electronics</a
+        >
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-gray-600 hover:text-blue-500">Home</a>
+          <a href="https://chat.whatsapp.com/DsPRt7Lmd9wCEnTBpRIl7h" class="text-gray-600 hover:text-blue-500">Group</a>
+          <a href="#" class="text-gray-600 hover:text-blue-500">Feedback</a>
+          <a href="#" class="text-gray-600 hover:text-blue-500">Login</a>
+          <a href="#" class="text-gray-600 hover:text-blue-500">Help</a>
+          <div class="flex items-center">
+            <input
+              type="text"
+              placeholder="Search..."
+              class="px-3 py-1 border border-gray-300 rounded-l-md focus:outline-none"
+            />
+            <button
+              class="bg-blue-500 text-white px-4 py-1 rounded-r-md hover:bg-blue-600"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Button --> 
+        <div class="md:hidden">
+          <button id="menu-open-btn" class="text-gray-800 focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu Sidebar -->
+    <div
+      id="mobile-menu-overlay"
+      class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden"
+    ></div>
+    <div
+      id="mobile-menu"
+      class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300 ease-in-out"
+    >
+      <div class="flex justify-end p-4">
+        <button id="menu-close-btn" class="text-gray-800 focus:outline-none">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col p-4 space-y-4">
+        <a
+          href="#"
+          class="block py-2 px-4 text-gray-700 hover:bg-gray-200 rounded-md"
+          >Home</a
+        >
+        <a
+          href="#"
+          class="block py-2 px-4 text-gray-700 hover:bg-gray-200 rounded-md"
+          >Group</a
+        >
+        <a
+          href="#"
+          class="block py-2 px-4 text-gray-700 hover:bg-gray-200 rounded-md"
+          >Feedback</a
+        >
+        <a
+          href="#"
+          class="block py-2 px-4 text-gray-700 hover:bg-gray-200 rounded-md"
+          >Login</a
+        >
+        <a
+          href="#"
+          class="block py-2 px-4 text-gray-700 hover:bg-gray-200 rounded-md"
+          >Help</a
+        >
+        <div class="pt-4">
+          <input
+            type="text"
+            placeholder="Search..."
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none"
+          />
+          <button
+            class="w-full mt-2 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Slider Section -->
+    <section class="slider-container">
+      <div class="slider-item">
+        <img
+          src="img2/slider1.jpg"
+          alt="Circuit Design"
+          onerror="this.onerror=null;this.src='https://placehold.co/1200x500/3b82f6/ffffff?text=Image+Not+Found';"
+        />
+        <div class="slider-text">Circuit Design & Analysis</div>
+      </div>
+      <div class="slider-item">
+        <img
+          src="img2/slider3.webp"
+          alt="Robotics"
+          onerror="this.onerror=null;this.src='https://placehold.co/1200x500/10b981/ffffff?text=Image+Not+Found';"
+        />
+        <div class="slider-text">Robotics & Automation</div>
+      </div>
+      <div class="slider-item">
+        <img
+          src="img2/slider4.jpg"
+          alt="PCB"
+          onerror="this.onerror=null;this.src='https://placehold.co/1200x500/8b5cf6/ffffff?text=Image+Not+Found';"
+        />
+        <div class="slider-text">PCB Manufacturing</div>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+      <!-- Resources Section -->
+      <section id="resources">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">
+          Explore Our Resources
+        </h2>
+        
+        <!-- Main Resource Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
+          <!-- E-Books Card -->
+          <div class="resource-card">
+            <h3 class="font-bold text-lg mb-2">📚 E-BOOKS</h3>
+            <p class="text-gray-600 text-sm">All semester reference books</p>
+            <div class="resource-links">
+              <a href="BOOKS/index.html" class="resource-link">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                View All Books
+              </a>
+            </div>
+          </div>
+          
+          <!-- Notes Card -->
+          <div class="resource-card">
+            <h3 class="font-bold text-lg mb-2">📝 SEMESTER NOTES</h3>
+            <p class="text-gray-600 text-sm">Download all notes here</p>
+            <div class="resource-links">
+              <a href="notes/SEMSTER/mechanical.html" class="resource-link secondary">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                View All Notes
+              </a>
+            </div>
+          </div>
+          
+          <!-- Previous Year Papers Card -->
+          <div class="resource-card">
+            <h3 class="font-bold text-lg mb-2">📄 PREVIOUS YEAR PAPERS</h3>
+            <p class="text-gray-600 text-sm">Practice with old question papers</p>
+            <div class="resource-links">
+              <a href="previous year question/index.html" class="resource-link warning">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                View Papers
+              </a>
+            </div>
+          </div>
+          
+          <!-- Syllabus Card -->
+          <div class="resource-card">
+            <h3 class="font-bold text-lg mb-2">📋 SYLLABUS</h3>
+            <p class="text-gray-600 text-sm">1ST TO ALL 6 SEM</p>
+            <div class="resource-links">
+              <a href="BOOKS/syllabus/MECHNICAL.pdf" class="resource-link danger">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                Download Syllabus
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Semester-wise Resources -->
+        <div class="semester-grid">
+          <!-- 1st Semester -->
+          <div class="semester-card">
+            <div class="semester-header">
+              <div class="semester-icon">1</div>
+              <div class="semester-title">1st Semester</div>
+            </div>
+            <div class="semester-links">
+              <a href="BOOKS/index.html" class="semester-link">
+                <span>📚 Books</span>
+                <div class="semester-link-icon">→</div>
+              </a>
+              <a href="notes/SEMSTER/SEM1/index.html" class="semester-link">
+                <span>📝 Notes</span>
+                <div class="semester-link-icon">→</div>
+              </a>
+              <a href="previous year question/index.html" class="semester-link">
+                <span>📄 Previous Year Papers</span>
+                <div class="semester-link-icon">→</div>
+              </a>
+              <a href="#" class="semester-link">
+                <span>❓ Important Questions</span>
+                <div class="semester-link-icon">→</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2nd Semester -->
+          <div class="semester-card">
+            <div class="semester-header">
+              <div class="semester-icon">2</div>
+              <div class="semester-title">2nd Semester</div>
+            </div>
+            <div class="semester-links">
+              <a href="BOOKS/index.html" class="semester-link">
+                <span>📚 Books</span>
+                <div class="semester-link-icon">→</div>
+              </a>
+              <a href="notes/SEMSTER/SEM2/index.html" class="semester-link">
+                <span>📝 Notes</span>
+                <div class="semester-link-icon">→</div>
+              </a>
+              <a href="previous year question/index.html" class="semester-link">
+                <span>📄 Previous Year Papers</span>
+                <div class="semester-link-icon">→</div>
+              </a>
+              <a href="#" class="semester-link">
+                <span>❓ Important Questions</span>
+                <div class="semester-link-icon">→</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3rd Semester -->
+          <div class="semester-card">
+            <div class="semester-header">
+              <div class="semester-icon">3</div>
+              <div class="semester-title">3rd Semester</div>
+            </div>
+            <div class="semester-links">
+              <a href="BOOKS/index.html" class="semester-link">
+                <span>📚 Books</span>
+                <div class="semester-link-icon">→</div>
+              </a>
+              <a href="notes/SEMSTER/SEM3/index.html" class="semester-link">
+                <span>📝 Notes</span>
+                <div class="semester-link-icon">→</div>
+              </a>
+              <a href="previous year question/index.html" class="semester-link">
+                <span>📄 Previous Year Papers</span>
+                <div class="semester-link-icon">→</div>
+              </a>
+              <a href="#" class="semester-link">
+                <span>❓ Important Questions</span>
+                <div class="semester-link-icon">→</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 4th Semester -->
+          <div class="semester-card">
+            <div class="semester-header">
+              <div class="semester-icon">4</div>
+              <div class="semester-title">4th Semester</div>
+            </div>
+            <div class="semester-links">
+              <a href="BOOKS/index.html" class="semester-link">
+                <span>📚 Books</span>
+                <div class="semester-link-icon">→</div>
+              </a>
+              <a href="notes/SEMSTER/SEM4/index.html" class="semester-link">
+                <span>📝 Notes</span>
+                <div class="semester-link-icon">→</div>
+              </a>
+              <a href="previous year question/index.html" class="semester-link">
+                <span>📄 Previous Year Papers</span>
+                <div class="semester-link-icon">→</div>
+              </a>
+              <a href="#" class="semester-link">
+                <span>❓ Important Questions</span>
+                <div class="semester-link-icon">→</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 5th Semester -->
+          <div class="semester-card">
+            <div class="semester-header">
+              <div class="semester-icon">5</div>
+              <div class="semester-title">5th Semester</div>
+            </div>
+            <div class="semester-links">
+              <a href="BOOKS/index.html" class="semester-link">
+                <span>📚 Books</span>
+                <div class="semester-link-icon">→</div>
+              </a>
+              <a href="notes/SEMSTER/SEM5/index.html" class="semester-link">
+                <span>📝 Notes</span>
+                <div class="semester-link-icon">→</div>
+              </a>
+              <a href="previous year question/index.html" class="semester-link">
+                <span>📄 Previous Year Papers</span>
+                <div class="semester-link-icon">→</div>
+              </a>
+              <a href="#" class="semester-link">
+                <span>❓ Important Questions</span>
+                <div class="semester-link-icon">→</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 6th Semester -->
+          <div class="semester-card">
+            <div class="semester-header">
+              <div class="semester-icon">6</div>
+              <div class="semester-title">6th Semester</div>
+            </div>
+            <div class="semester-links">
+              <a href="BOOKS/index.html" class="semester-link">
+                <span>📚 Books</span>
+                <div class="semester-link-icon">→</div>
+              </a>
+              <a href="notes/SEMSTER/SEM6/index.html" class="semester-link">
+                <span>📝 Notes</span>
+                <div class="semester-link-icon">→</div>
+              </a>
+              <a href="previous year question/index.html" class="semester-link">
+                <span>📄 Previous Year Papers</span>
+                <div class="semester-link-icon">→</div>
+              </a>
+              <a href="#" class="semester-link">
+                <span>❓ Important Questions</span>
+                <div class="semester-link-icon">→</div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Resources -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+          <div class="resource-card">
+            <h3 class="font-bold text-lg mb-2">👥 STUDY GROUP TEAM</h3>
+            <p class="text-gray-600 text-sm">Learn about our mission and team</p>
+            <div class="resource-links">
+              <a href="#" class="resource-link">Learn More</a>
+            </div>
+          </div>
+          <div class="resource-card">
+            <h3 class="font-bold text-lg mb-2">💬 COMMUNITY FORUM</h3>
+            <p class="text-gray-600 text-sm">Join discussions and share ideas</p>
+            <div class="resource-links">
+              <a href="#" class="resource-link">Join Forum</a>
+            </div>
+          </div>
+          <div class="resource-card">
+            <h3 class="font-bold text-lg mb-2">🎯 CAREER GUIDANCE</h3>
+            <p class="text-gray-600 text-sm">Job opportunities and higher studies</p>
+            <div class="resource-links">
+              <a href="#" class="resource-link">Get Guidance</a>
+            </div>
+          </div>
+          <div class="resource-card">
+            <h3 class="font-bold text-lg mb-2">🛠️ TECHNICAL RESOURCES</h3>
+            <p class="text-gray-600 text-sm">Software tools, codes, and standards</p>
+            <div class="resource-links">
+              <a href="#" class="resource-link">Explore Tools</a>
+            </div>
+          </div>
+          <div class="resource-card">
+            <h3 class="font-bold text-lg mb-2">📰 BLOG & ARTICLES</h3>
+            <p class="text-gray-600 text-sm">Stay updated with the latest trends</p>
+            <div class="resource-links">
+              <a href="#" class="resource-link">Read Blog</a>
+            </div>
+          </div>
+          <div class="resource-card">
+            <h3 class="font-bold text-lg mb-2">📞 CONTACT US</h3>
+            <p class="text-gray-600 text-sm">Get in touch with us for queries</p>
+            <div class="resource-links">
+              <a href="#" class="resource-link">Contact</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Subjects Section -->
+      <section id="subjects" class="mt-16">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">
+          Key Subjects
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="font-semibold text-blue-600 mb-2">Basic Electronics</h3>
+            <p class="text-gray-600 text-sm">
+              Fundamentals of semiconductor devices, diodes, and transistors.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="font-semibold text-blue-600 mb-2">
+              Digital Electronics
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Logic gates, boolean algebra, combinational and sequential
+              circuits.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="font-semibold text-blue-600 mb-2">Microprocessors</h3>
+            <p class="text-gray-600 text-sm">
+              Architecture and programming of 8085/8086 microprocessors.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="font-semibold text-blue-600 mb-2">
+              Communication Systems
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Basics of analog and digital communication techniques.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lab Facilities Section -->
+      <section id="labs" class="mt-16">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">
+          Our Lab Facilities
+        </h2>
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <ul class="list-disc list-inside space-y-2 text-gray-700">
+            <li>Analog & Digital Circuits Lab</li>
+            <li>Microprocessor & Microcontroller Lab</li>
+            <li>PCB Design & Fabrication Lab</li>
+            <li>Communication Engineering Lab</li>
+            <li>Industrial Automation Lab</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Meet Our Admins Section -->
+      <section id="admins" class="mt-16">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">
+          Meet Our Admins
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Admin Card 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <img
+              class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+              src="img2/card2.jpg"
+              alt="Admin 1 Photo"
+              onerror="this.onerror=null;this.src='https://placehold.co/200x200/EFEFEF/AAAAAA?text=Admin';"
+            />
+            <h3 class="font-bold text-xl mb-1">Rohan Sharma</h3>
+            <p class="text-gray-600 font-semibold mb-2">Group Coordinator</p>
+            <p class="text-gray-500 text-sm">Contact: +91 12345 67890</p>
+          </div>
+          <!-- Admin Card 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <img
+              class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+              src="img2/card2.avif"
+              alt="Admin 2 Photo"
+              onerror="this.onerror=null;this.src='https://placehold.co/200x200/EFEFEF/AAAAAA?text=Admin';"
+            />
+            <h3 class="font-bold text-xl mb-1">Priya Singh</h3>
+            <p class="text-gray-600 font-semibold mb-2">Content Manager</p>
+            <p class="text-gray-500 text-sm">Contact: +91 09876 54321</p>
+          </div>
+          <!-- Admin Card 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <img
+              class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+              src="img2/card5.jpg"
+              alt="Admin 3 Photo"
+              onerror="this.onerror=null;this.src='https://placehold.co/200x200/EFEFEF/AAAAAA?text=Admin';"
+            />
+            <h3 class="font-bold text-xl mb-1">Amit Kumar</h3>
+            <p class="text-gray-600 font-semibold mb-2">Technical Support</p>
+            <p class="text-gray-500 text-sm">Contact: +91 11223 34455</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="font-bold text-lg mb-2">Quick Links</h3>
+            <ul>
+              <li><a href="#" class="hover:text-blue-400">Home</a></li>
+              <li><a href="#" class="hover:text-blue-400">About</a></li>
+              <li><a href="#" class="hover:text-blue-400">Courses</a></li>
+              <li><a href="#" class="hover:text-blue-400">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold text-lg mb-2">Contact Info</h3>
+            <p>Email: diploma.electronics@studygroup.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Address: uttar pardesh Lucknow</p>
+          </div>
+          <div>
+            <h3 class="font-bold text-lg mb-2">Follow Us</h3>
+            <div class="flex space-x-4">
+              <a href="#" class="hover:text-blue-400">Facebook</a>
+              <a href="#" class="hover:text-blue-400">Twitter</a>
+              <a href="#" class="hover:text-blue-400">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-8 pt-4 border-t border-gray-700">
+          <p>
+            &copy; 2025 Diploma in Electronics Education. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // --- JavaScript for Mobile Menu ---
+      const menuOpenBtn = document.getElementById("menu-open-btn");
+      const menuCloseBtn = document.getElementById("menu-close-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
+
+      function openMenu() {
+        mobileMenu.classList.remove("translate-x-full");
+        mobileMenuOverlay.classList.remove("hidden");
+      }
+
+      function closeMenu() {
+        mobileMenu.classList.add("translate-x-full");
+        mobileMenuOverlay.classList.add("hidden");
+      }
+
+      menuOpenBtn.addEventListener("click", openMenu);
+      menuCloseBtn.addEventListener("click", closeMenu);
+      mobileMenuOverlay.addEventListener("click", closeMenu);
+
+      // --- JavaScript for Slider ---
+      let slideIndex = 1;
+      let slideInterval;
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+        resetInterval();
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slider-item");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+      }
+
+      function autoShowSlides() {
+        let i;
+        let slides = document.getElementsByClassName("slider-item");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+      }
+
+      function startInterval() {
+        slideInterval = setInterval(autoShowSlides, 4000); // Change image every 4 seconds
+      }
+
+      function resetInterval() {
+        clearInterval(slideInterval);
+        startInterval();
+      }
+
+      // Initial setup
+      showSlides(slideIndex);
+      startInterval();
+    </script>
+  </body>
+</html>

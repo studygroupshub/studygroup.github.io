@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books PDF - Civil Engineering Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        #coinDisplay {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background: rgba(0, 123, 255, 0.9);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .books-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .book-card {
+            border: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .book-card:hover {
+            transform: translateY(-5px);
+        }
+        .book-cover {
+            height: 200px;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .book-cover svg {
+            width: 64px;
+            height: 64px;
+            color: #6c757d;
+        }
+        .book-meta {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        .filter-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar (Same as index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Civil Engineering Portal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Notes</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="semester1.html">Semester 1</a></li>
+                            <li><a class="dropdown-item" href="semester2.html">Semester 2</a></li>
+                            <li><a class="dropdown-item" href="semester3.html">Semester 3</a></li>
+                            <li><a class="dropdown-item" href="semester4.html">Semester 4</a></li>
+                            <li><a class="dropdown-item" href="semester5.html">Semester 5</a></li>
+                            <li><a class="dropdown-item" href="semester6.html">Semester 6</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="questions.html">Important Questions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="papers.html">Previous Papers</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="books.html">Books</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mcq.html">MCQ Practice</a></li>
+                    <li class="nav-item"><a class="nav-link" href="upload.html">Upload</a></li>
+                    <li class="nav-item"><a class="nav-link" href="videos.html">Video Lectures</a></li>
+                    <li class="nav-item"><a class="nav-link" href="forum.html">Doubt Forum</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Coin Display -->
+    <div id="coinDisplay">
+        <i class="bi bi-coin"></i> Coins: <span id="coinCount">0</span>
+    </div>
+
+    <!-- Books Section -->
+    <div class="container py-5">
+        <div class="books-container">
+            <!-- Filter Section -->
+            <div class="filter-section">
+                <div class="row g-3">
+                    <div class="col-md-3">
+                        <select class="form-select">
+                            <option>All Categories</option>
+                            <option>Structural Engineering</option>
+                            <option>Surveying</option>
+                            <option>Construction</option>
+                            <option>Design</option>
+                            <option>Mechanics</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-select">
+                            <option>All Semesters</option>
+                            <option>Semester 1</option>
+                            <option>Semester 2</option>
+                            <option>Semester 3</option>
+                            <option>Semester 4</option>
+                            <option>Semester 5</option>
+                            <option>Semester 6</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Search books...">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary w-100">Search</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- First Semester Books -->
+            <h3 class="mb-4">First Semester Books</h3>
+            <div class="row g-4 mb-5">
+                <!-- Mathematics-I -->
+                <div class="col-md-3">
+                    <div class="card book-card">
+                        <div class="book-cover">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Mathematics-I</h5>
+                            <p class="book-meta">Engineering Mathematics • 1st Year</p>
+                            <p class="card-text">Covers differential calculus, integral calculus, and matrices.</p>
+                            <button onclick="downloadBook(25, 'Mathematics-I')" class="btn btn-primary w-100">Download (25 coins)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Applied Physics-I -->
+                <div class="col-md-3">
+                    <div class="card book-card">
+                        <div class="book-cover">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Applied Physics-I</h5>
+                            <p class="book-meta">Engineering Physics • 1st Year</p>
+                            <p class="card-text">Covers mechanics, waves, optics and modern physics.</p>
+                            <button onclick="downloadBook(25, 'Applied Physics-I')" class="btn btn-primary w-100">Download (25 coins)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Applied Chemistry -->
+                <div class="col-md-3">
+                    <div class="card book-card">
+                        <div class="book-cover">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Applied Chemistry</h5>
+                            <p class="book-meta">Engineering Chemistry • 1st Year</p>
+                            <p class="card-text">Covers water technology, polymers, and engineering materials.</p>
+                            <button onclick="downloadBook(25, 'Applied Chemistry')" class="btn btn-primary w-100">Download (25 coins)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Engineering Graphics -->
+                <div class="col-md-3">
+                    <div class="card book-card">
+                        <div class="book-cover">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Engineering Graphics</h5>
+                            <p class="book-meta">Technical Drawing • 1st Year</p>
+                            <p class="card-text">Covers engineering drawing principles and CAD basics.</p>
+                            <button onclick="downloadBook(25, 'Engineering Graphics')" class="btn btn-primary w-100">Download (25 coins)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Communication Skills in English -->
+                <div class="col-md-3">
+                    <div class="card book-card">
+                        <div class="book-cover">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Communication Skills in English</h5>
+                            <p class="book-meta">English • 1st Year</p>
+                            <p class="card-text">Covers professional communication and technical writing.</p>
+                            <button onclick="downloadBook(25, 'Communication Skills in English')" class="btn btn-primary w-100">Download (25 coins)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Engineering Workshop Practice -->
+                <div class="col-md-3">
+                    <div class="card book-card">
+                        <div class="book-cover">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Engineering Workshop Practice</h5>
+                            <p class="book-meta">Workshop • 1st Year</p>
+                            <p class="card-text">Covers basic workshop tools and manufacturing processes.</p>
+                            <button onclick="downloadBook(25, 'Engineering Workshop Practice')" class="btn btn-primary w-100">Download (25 coins)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Semester Books -->
+            <h3 class="mb-4">Second Semester Books</h3>
+            <div class="row g-4">
+                <!-- Mathematics-II -->
+                <div class="col-md-3">
+                    <div class="card book-card">
+                        <div class="book-cover">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Mathematics-II</h5>
+                            <p class="book-meta">Advanced Engineering Mathematics • 1st Year</p>
+                            <p class="card-text">Covers differential equations and numerical methods.</p>
+                            <button onclick="downloadBook(25, 'Mathematics-II')" class="btn btn-primary w-100">Download (25 coins)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Applied Physics-II -->
+                <div class="col-md-3">
+                    <div class="card book-card">
+                        <div class="book-cover">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Applied Physics-II</h5>
+                            <p class="book-meta">Advanced Engineering Physics • 1st Year</p>
+                            <p class="card-text">Covers quantum mechanics and semiconductor physics.</p>
+                            <button onclick="downloadBook(25, 'Applied Physics-II')" class="btn btn-primary w-100">Download (25 coins)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Engineering Mechanics -->
+                <div class="col-md-3">
+                    <div class="card book-card">
+                        <div class="book-cover">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Engineering Mechanics</h5>
+                            <p class="book-meta">Mechanics for Engineers • 1st Year</p>
+                            <p class="card-text">Covers statics, dynamics, and strength of materials.</p>
+                            <button onclick="downloadBook(25, 'Engineering Mechanics')" class="btn btn-primary w-100">Download (25 coins)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Environmental Sciences -->
+                <div class="col-md-3">
+                    <div class="card book-card">
+                        <div class="book-cover">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Environmental Sciences</h5>
+                            <p class="book-meta">Environmental Engineering • 1st Year</p>
+                            <p class="card-text">Covers environmental impact and sustainable development.</p>
+                            <button onclick="downloadBook(25, 'Environmental Sciences')" class="btn btn-primary w-100">Download (25 coins)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Introduction to IT Systems -->
+                <div class="col-md-3">
+                    <div class="card book-card">
+                        <div class="book-cover">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Introduction to IT Systems</h5>
+                            <p class="book-meta">Information Technology • 1st Year</p>
+                            <p class="card-text">Covers computer fundamentals and basic programming.</p>
+                            <button onclick="downloadBook(25, 'Introduction to IT Systems')" class="btn btn-primary w-100">Download (25 coins)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fundamentals of Electrical & Electronics Engineering -->
+                <div class="col-md-3">
+                    <div class="card book-card">
+                        <div class="book-cover">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Fundamentals of Electrical & Electronics Engineering</h5>
+                            <p class="book-meta">Electrical Engineering • 1st Year</p>
+                            <p class="card-text">Covers basic electrical and electronic principles.</p>
+                            <button onclick="downloadBook(25, 'Fundamentals of Electrical & Electronics Engineering')" class="btn btn-primary w-100">Download (25 coins)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Books -->
+            <h3 class="mb-4 mt-5">Additional Reference Books</h3>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="card book-card">
+                        <div class="book-cover">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Structural Analysis</h5>
+                            <p class="book-meta">By R.C. Hibbeler • 10th Edition</p>
+                            <p class="card-text">Comprehensive guide to structural analysis principles and methods.</p>
+                            <button onclick="downloadBook(30, 'Structural Analysis')" class="btn btn-primary w-100">Download (30 coins)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Card 2 -->
+                <div class="col-md-3">
+                    <div class="card book-card">
+                        <div class="book-cover">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Surveying and Levelling</h5>
+                            <p class="book-meta">By N.N. Basak • 3rd Edition</p>
+                            <p class="card-text">Complete guide to surveying principles and techniques.</p>
+                            <button onclick="downloadBook(25, 'Surveying and Levelling')" class="btn btn-primary w-100">Download (25 coins)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Card 3 -->
+                <div class="col-md-3">
+                    <div class="card book-card">
+                        <div class="book-cover">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Soil Mechanics and Foundation</h5>
+                            <p class="book-meta">By B.C. Punmia • 16th Edition</p>
+                            <p class="card-text">Detailed coverage of soil mechanics and foundation engineering.</p>
+                            <button onclick="downloadBook(35, 'Soil Mechanics and Foundation')" class="btn btn-primary w-100">Download (35 coins)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Card 4 -->
+                <div class="col-md-3">
+                    <div class="card book-card">
+                        <div class="book-cover">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Construction Materials</h5>
+                            <p class="book-meta">By S.K. Duggal • 4th Edition</p>
+                            <p class="card-text">Essential guide to construction materials and their properties.</p>
+                            <button onclick="downloadBook(20, 'Construction Materials')" class="btn btn-primary w-100">Download (20 coins)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <nav class="mt-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#">Previous</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2024 Civil Engineering Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize coins from localStorage
+        let userCoins = localStorage.getItem('userCoins') || 0;
+        document.getElementById('coinCount').textContent = userCoins;
+
+        function downloadBook(cost, bookName) {
+            userCoins = Number(localStorage.getItem('userCoins')) || 0;
+            
+            if (userCoins < cost) {
+                alert(`Not enough coins! You need ${cost} coins to download this book.\nUpload resources to earn more coins.`);
+                return;
+            }
+
+            // Deduct coins and update display
+            userCoins -= cost;
+            localStorage.setItem('userCoins', userCoins);
+            document.getElementById('coinCount').textContent = userCoins;
+
+            // Simulate download
+            alert(`Successfully downloaded ${bookName}!\nRemaining coins: ${userCoins}`);
+        }
+
+        // Update coin display when page loads
+        window.addEventListener('storage', function(e) {
+            if (e.key === 'userCoins') {
+                document.getElementById('coinCount').textContent = e.newValue;
+            }
+        });
+    </script>
+    <script>
+        // Add click event to download buttons
+        document.querySelectorAll('.btn-primary').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert('PDF download functionality will be implemented with backend integration.');
+            });
+        });
+    </script>
+</body>
+</html>

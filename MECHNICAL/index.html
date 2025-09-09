@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mechanical engineering production</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1>Mechanical engineering production</h1>
+
+      <!-- Navigation -->
+      <nav class="navbar">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li>
+            <a href="https://chat.whatsapp.com/KJPIYXRQi2zBc3N3WMpDXh">Group</a>
+          </li>
+          <li><a href="#feedback">Feedback</a></li>
+          <li><a href="#login">Login</a></li>
+          <li><a href="https://t.me/studygrouphelpbot">help</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main Content -->
+      <div class="search-bar">
+        <input type="text" placeholder="Search..." />
+        <button>Search</button>
+      </div>
+    </header>
+
+    <!-- Image Slider Section -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="image1.jpg" alt="Mechanical Engineering Lab" />
+        </div>
+        <div class="swiper-slide">
+          <img src="image2.jpg" alt="CAD Design" />
+        </div>
+        <div class="swiper-slide">
+          <img src="image3.jpg" alt="Workshop" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <main>
+      <h2>Explore Our Resources</h2>
+      <div class="card-container">
+        <a href="About us/aboutus.html" class="card">
+          <h3>STUDY GROUP TEAM</h3>
+          <p>Learn about our mission and team.</p>
+        </a>
+        <a href="syllabus/MECHNICAL.pdf" class="card">
+          <h3>SYLLABUS</h3>
+          <p>1ST TO ALL 6 SEM</p>
+        </a>
+        <a href="notes/SEMSTER/COMPUTER.html" class="card">
+          <h3>STUDY MATERIAL</h3>
+          <p>ALL SEMESTER NOTES</p>
+        </a>
+        <a href="BOOKS/index.html" class="card">
+          <h3>STUDY MATERIAL</h3>
+          <p>ALL SEMESTER BOOKS.</p>
+        </a>
+        <a href="#" class="card">
+          <h3>COMMUNITY & FORUM</h3>
+          <p>Join discussions and share ideas.</p>
+        </a>
+        <a href="previous year question/index.html" class="card">
+          <h3>PREVIOUS YEAR PAPERS</h3>
+          <p>Explore hands-on learning.</p>
+        </a>
+        <a href="#" class="card">
+          <h3>CAREER GUIDANCE</h3>
+          <p>Job opportunities and higher studies.</p>
+        </a>
+        <a href="#" class="card">
+          <h3>TECHNICAL RESOURCES</h3>
+          <p>Software tools, codes, and standards.</p>
+        </a>
+
+        <a href="../BLOG/index.html" class="card">
+          <h3>BLOG & ARTICLES</h3>
+          <p>Stay updated with the latest trends.</p>
+        </a>
+        <a href="#" class="card">
+          <h3>CONTACT US</h3>
+          <p>Get in touch with us for queries.</p>
+        </a>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../About us/aboutus.html">About</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p>Email: studygroup207@gmail.com</p>
+          <p>Phone: +91 7379...97</p>
+          <p>Address: Gov Polytechnic Sikandra Kanpur dehat</p>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 Mechanical Engineering Education. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 3000,
+        },
+      });
+    </script>
+  </body>
+</html>

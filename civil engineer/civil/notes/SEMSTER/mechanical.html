@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civil Engineering Notes - All Semesters</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f0f2f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .semester-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin: 30px 0;
+            grid-column: 1 / -1;
+        }
+
+        .semester-box {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 1px solid #e1e1e1;
+        }
+
+        .semester-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .semester-title {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .semester-box::before {
+            content: '📚';
+            display: block;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            grid-column: 1 / -1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .social-button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            background: #fff;
+            border-radius: 8px;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .social-button img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .social-button span {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .join-btn {
+            padding: 8px 20px;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .whatsapp .join-btn {
+            background: #25D366;
+        }
+
+        .telegram .join-btn {
+            background: #0088cc;
+        }
+
+        .instagram .join-btn {
+            background: #E1306C;
+        }
+
+        .join-btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="semester-container">
+        <div class="main-tagline">
+            <h2>Welcome to Study Group</h2>
+            <div class="sub-tagline">1st से 6th Semester तक के सभी नोट्स – फ्री और आसान डाउनलोड!</div>
+            <div class="sub-tagline">टॉपर्स की नोटबुक से लिया गया कंटेंट – सीधे आपके हाथ में!</div>
+            <div class="sub-tagline">एग्जाम में टॉप करने का सीक्रेट? Study Group के नोट्स!</div>
+        </div>
+
+        <h1>Civil Engineering Notes</h1>
+        
+        <div class="social-links">
+            <div class="social-button whatsapp">
+                <img src="whatsapp.jpg" alt="WhatsApp">
+                <span>WhatsApp Group</span>
+                <a href="#" class="join-btn">Join Now</a>
+            </div>
+            
+            <div class="social-button telegram">
+                <img src="teligram.jpg" alt="Telegram">
+                <span>Telegram Group</span>
+                <a href="#" class="join-btn">Join Now</a>
+            </div>
+            
+            <div class="social-button instagram">
+                <img src="teligram.jpg" alt="Instagram">
+                <span>Teligram channel</span>
+                <a href="#" class="join-btn">Join Now</a>
+            </div>
+        </div>
+        
+
+        <div class="semester-box" onclick="location.href='SEM1/index.html'">
+            <div class="semester-title">1st Semester</div>
+            <p>Mathematics-I, Applied Physics-I, Applied Chemistry, Communication Skills, Engineering Graphics, Workshop Practice, Sports & Yoga</p>
+        </div>
+        
+        <div class="semester-box" onclick="location.href='SEM2/index.html'">
+            <div class="semester-title">2nd Semester</div>
+            <p>Mathematics-II, Applied Physics-II, Introduction to IT Systems, Fundamentals of Electrical & Electronics, Engineering Mechanics, Environmental Sciences</p>
+        </div>
+        
+        <div class="semester-box" onclick="location.href='SEM3/index.html'">
+            <div class="semester-title">3rd Semester</div>
+            <p>Construction Materials, Basic Surveying, Mechanics of Materials, Building Construction, Building Planning, Concrete Technology, Summer Internship</p>
+        </div>
+        
+        <div class="semester-box" onclick="location.href='SEM4/index.html'">
+            <div class="semester-title">4th Semester</div>
+            <p>Hydraulics, Advanced Surveying, Theory of Structures, Design of RCC Structures, RCC Drawing, Water Resource Engineering, Public Health Engineering</p>
+        </div>
+        
+        <div class="semester-box" onclick="location.href='SEM5/index.html'">
+            <div class="semester-title">5th Semester</div>
+            <p>Water and Waste Water Engineering, Railways Bridges and Tunnels, Earthquake Engineering, Soil Mechanics, Surveying-II, Irrigation Drawing, Universal Human Values</p>
+        </div>
+        
+        <div class="semester-box" onclick="location.href='SEM6/index.html'">
+            <div class="semester-title">6th Semester</div>
+            <p>Survey Camp, Quantity Surveying, Construction Management, Design of Steel Structure, Steel Drawing, Software Applications, Elective, Project Work</p>
+        </div>
+    </div>
+</body>
+</html>
+<head>
+    <style>
+        /* Add these new styles */
+        .main-tagline {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(45deg, #1a237e, #311b92);
+            color: white;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .main-tagline h2 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            display: inline-block;
+        }
+
+        .main-tagline h2::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            bottom: -5px;
+            left: 0;
+            background: #fff;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .main-tagline h2:hover::after {
+            transform: scaleX(1);
+        }
+
+        .sub-tagline {
+            font-size: 1.3em;
+            margin: 15px 0;
+            color: #e8eaf6;
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            position: relative;
+            display: inline-block;
+            padding: 0 10px;
+        }
+
+        .sub-tagline::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: #4fc3f7;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .sub-tagline:hover::after {
+            transform: scaleX(1);
+        }
+    </style>
+</head>

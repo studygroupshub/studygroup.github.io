@@ -1,0 +1,316 @@
+/* Projects Page Styles */
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary), #764ba2);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Technology Selection */
+.tech-selection {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--dark);
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tech-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 3px solid transparent;
+}
+
+.tech-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border-color: var(--primary);
+}
+
+.tech-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.tech-card[data-tech="java"] .tech-icon {
+    background: linear-gradient(45deg, #f89820, #ff6b35);
+}
+
+.tech-card[data-tech="mern"] .tech-icon {
+    background: linear-gradient(45deg, #61dafb, #764abc);
+}
+
+.tech-card[data-tech="python"] .tech-icon {
+    background: linear-gradient(45deg, #3776ab, #ffde57);
+}
+
+.tech-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.tech-card p {
+    color: var(--secondary);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.project-count {
+    background: var(--primary);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--secondary);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border-color: var(--primary);
+}
+
+.project-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, var(--primary), #764ba2);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--dark);
+    line-height: 1.4;
+}
+
+.project-card p {
+    color: var(--secondary);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tag {
+    background: #e9ecef;
+    color: var(--dark);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.project-difficulty {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.difficulty-badge {
+    padding: 6px 15px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.difficulty-badge.beginner {
+    background: #d4edda;
+    color: #155724;
+}
+
+.difficulty-badge.intermediate {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.difficulty-badge.advanced {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Dark Mode Styles */
+body.dark-mode .tech-selection {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode .tech-card {
+    background-color: #2d2d2d;
+    color: #f1f1f1;
+}
+
+body.dark-mode .tech-card h3 {
+    color: #f1f1f1;
+}
+
+body.dark-mode .tech-card p {
+    color: #b0b0b0;
+}
+
+body.dark-mode .projects-section {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode .project-card {
+    background-color: #2d2d2d;
+    color: #f1f1f1;
+}
+
+body.dark-mode .project-card h3 {
+    color: #f1f1f1;
+}
+
+body.dark-mode .project-card p {
+    color: #b0b0b0;
+}
+
+body.dark-mode .tag {
+    background-color: #3d3d3d;
+    color: #f1f1f1;
+}
+
+body.dark-mode .section-title,
+body.dark-mode .section-header h2 {
+    color: #f1f1f1;
+}
+
+body.dark-mode .section-header p {
+    color: #b0b0b0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .section-title,
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .tech-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+    
+    .tech-card,
+    .project-card {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .tech-selection,
+    .projects-section {
+        padding: 60px 0;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title,
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+}
+

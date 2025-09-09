@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aptitude Quiz - Study Group</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="quiz-questions.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <button id="darkModeToggle"><i class="fas fa-moon"></i></button>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1><i class="fas fa-brain"></i> APTITUDE QUIZ</h1>
+            <p>Test your logical reasoning and quantitative aptitude!</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <button class="nav-toggle" aria-label="Toggle Navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links">
+                <a href="../index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="index.html"><i class="fas fa-question-circle"></i> Quiz Hub</a>
+                <a href="#" class="active"><i class="fas fa-brain"></i> Aptitude</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Quiz Container -->
+    <div class="quiz-container">
+        <div class="container">
+            <!-- Quiz Instructions -->
+            <div id="instructions" class="quiz-section">
+                <div class="instructions-card">
+                    <h2><i class="fas fa-info-circle"></i> Quiz Instructions</h2>
+                    <div class="instructions-content">
+                        <div class="instruction-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Time Limit</h4>
+                                <p>20 minutes to complete 35 questions</p>
+                            </div>
+                        </div>
+                        <div class="instruction-item">
+                            <i class="fas fa-question-circle"></i>
+                            <div>
+                                <h4>Question Format</h4>
+                                <p>Multiple choice questions with 4 options each</p>
+                            </div>
+                        </div>
+                        <div class="instruction-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Scoring</h4>
+                                <p>+2 points for correct answer, 0 for incorrect</p>
+                            </div>
+                        </div>
+                        <div class="instruction-item">
+                            <i class="fas fa-undo"></i>
+                            <div>
+                                <h4>Navigation</h4>
+                                <p>You can go back and change answers before submitting</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="startQuiz" class="start-quiz-btn">
+                        <i class="fas fa-play"></i> Start Quiz
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quiz Interface -->
+            <div id="quizInterface" class="quiz-section" style="display: none;">
+                <!-- Quiz Header -->
+                <div class="quiz-header">
+                    <div class="quiz-info">
+                        <h2><i class="fas fa-brain"></i> Aptitude Quiz</h2>
+                        <p>Question <span id="currentQuestion">1</span> of <span id="totalQuestions">35</span></p>
+                    </div>
+                    <div class="quiz-timer">
+                        <i class="fas fa-clock"></i>
+                        <span id="timer">20:00</span>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                    <span id="progressText">0%</span>
+                </div>
+
+                <!-- Question Container -->
+                <div class="question-container">
+                    <div class="question-card">
+                        <h3 id="questionText">Loading question...</h3>
+                        <div class="options-container">
+                            <div class="option" data-option="A">
+                                <span class="option-label">A</span>
+                                <span class="option-text" id="optionA">Loading...</span>
+                            </div>
+                            <div class="option" data-option="B">
+                                <span class="option-label">B</span>
+                                <span class="option-text" id="optionB">Loading...</span>
+                            </div>
+                            <div class="option" data-option="C">
+                                <span class="option-label">C</span>
+                                <span class="option-text" id="optionC">Loading...</span>
+                            </div>
+                            <div class="option" data-option="D">
+                                <span class="option-label">D</span>
+                                <span class="option-text" id="optionD">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="quiz-navigation">
+                    <button id="prevBtn" class="nav-btn" disabled>
+                        <i class="fas fa-arrow-left"></i> Previous
+                    </button>
+                    <button id="nextBtn" class="nav-btn">
+                        Next <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button id="submitBtn" class="submit-btn" style="display: none;">
+                        <i class="fas fa-check"></i> Submit Quiz
+                    </button>
+                </div>
+
+                <!-- Question Navigator -->
+                <div class="question-navigator">
+                    <h4>Question Navigator</h4>
+                    <div id="questionGrid" class="question-grid">
+                        <!-- Question numbers will be generated here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results" class="quiz-section" style="display: none;">
+                <div class="results-card">
+                    <div class="results-header">
+                        <i class="fas fa-trophy"></i>
+                        <h2>Quiz Results</h2>
+                    </div>
+                    <div class="results-content">
+                        <div class="result-item">
+                            <span class="result-label">Score:</span>
+                            <span id="finalScore" class="result-value">0/70</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Percentage:</span>
+                            <span id="percentage" class="result-value">0%</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Correct Answers:</span>
+                            <span id="correctAnswers" class="result-value">0/35</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Time Taken:</span>
+                            <span id="timeTaken" class="result-value">00:00</span>
+                        </div>
+                    </div>
+                    <div class="results-actions">
+                        <button id="reviewBtn" class="action-btn">
+                            <i class="fas fa-eye"></i> Review Answers
+                        </button>
+                        <button id="retakeBtn" class="action-btn">
+                            <i class="fas fa-redo"></i> Retake Quiz
+                        </button>
+                        <a href="index.html" class="action-btn">
+                            <i class="fas fa-home"></i> Back to Quiz Hub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <h3>Study Hub</h3>
+                <p>Your Gateway to Success in Computer Science</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="../index.html">Home</a>
+                <a href="index.html">Quiz Hub</a>
+                <a href="../courese/courses.html">Courses</a>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <a href="https://t.me/itcoursessall"><i class="fab fa-telegram"></i> Telegram</a>
+                <a href="tel:+919876543210"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Study Hub | Quiz Platform</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="aptitude-questions.js"></script>
+    <script src="quiz-engine.js"></script>
+</body>
+</html>
+
+

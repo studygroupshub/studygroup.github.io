@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Ideas - Study Group</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="projects.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <button id="darkModeToggle"><i class="fas fa-moon"></i></button>
+
+    <header class="header">
+      <div class="container">
+        <h1><i class="fas fa-project-diagram"></i> PROJECT IDEAS</h1>
+        <p>Explore amazing project ideas for your portfolio!</p>
+      </div>
+    </header>
+
+    <nav class="nav">
+      <div class="container">
+        <button class="nav-toggle" aria-label="Toggle Navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links">
+          <a href="../index.html"><i class="fas fa-home"></i> Home</a>
+          <a href="../quiz/index.html"
+            ><i class="fas fa-question-circle"></i> Quiz Hub</a
+          >
+          <a href="../courese/courses.html"
+            ><i class="fas fa-graduation-cap"></i> Courses</a
+          >
+          <a href="#" class="active"
+            ><i class="fas fa-project-diagram"></i> Projects</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h2>Build Your Portfolio with Amazing Projects</h2>
+          <p>Choose from Java, MERN Stack, or Python projects</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tech-selection">
+      <div class="container">
+        <h2 class="section-title">Choose Your Technology Stack</h2>
+        <div class="tech-grid">
+          <div class="tech-card" data-tech="java">
+            <div class="tech-icon">
+              <i class="fab fa-java"></i>
+            </div>
+            <h3>Java Projects</h3>
+            <p>Desktop applications and management systems</p>
+            <span class="project-count">17 Projects</span>
+          </div>
+          <div class="tech-card" data-tech="mern">
+            <div class="tech-icon">
+              <i class="fab fa-react"></i>
+            </div>
+            <h3>MERN Stack</h3>
+            <p>Full-stack web applications</p>
+            <span class="project-count">18 Projects</span>
+          </div>
+          <div class="tech-card" data-tech="python">
+            <div class="tech-icon">
+              <i class="fab fa-python"></i>
+            </div>
+            <h3>Python Projects</h3>
+            <p>AI/ML, web development, and automation</p>
+            <span class="project-count">19 Projects</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="java-projects" class="projects-section" style="display: none">
+      <div class="container">
+        <div class="section-header">
+          <h2><i class="fab fa-java"></i> Java Projects</h2>
+          <p>Build robust desktop applications and management systems</p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <h3>Student Management System</h3>
+            <p>Complete student database management with CRUD operations</p>
+            <div class="project-tags">
+              <span class="tag">Swing</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">JDBC</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge beginner">Beginner</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-book"></i>
+            </div>
+            <h3>Library Management System</h3>
+            <p>Manage books, members, and borrowing operations</p>
+            <div class="project-tags">
+              <span class="tag">JavaFX</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">Collections</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-hotel"></i>
+            </div>
+            <h3>Hotel Booking System</h3>
+            <p>Room reservation and management system</p>
+            <div class="project-tags">
+              <span class="tag">Swing</span>
+              <span class="tag">File I/O</span>
+              <span class="tag">OOP</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-clipboard-check"></i>
+            </div>
+            <h3>Attendance Management System</h3>
+            <p>Track student/employee attendance with reports</p>
+            <div class="project-tags">
+              <span class="tag">JavaFX</span>
+              <span class="tag">Charts</span>
+              <span class="tag">Excel Export</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-money-bill-wave"></i>
+            </div>
+            <h3>Employee Payroll System</h3>
+            <p>Calculate salaries, deductions, and generate payslips</p>
+            <div class="project-tags">
+              <span class="tag">Swing</span>
+              <span class="tag">PDF Generation</span>
+              <span class="tag">Calculations</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge advanced">Advanced</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-question-circle"></i>
+            </div>
+            <h3>Online Quiz Application</h3>
+            <p>Interactive quiz system with scoring and results</p>
+            <div class="project-tags">
+              <span class="tag">Swing</span>
+              <span class="tag">Timer</span>
+              <span class="tag">File I/O</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-hospital"></i>
+            </div>
+            <h3>Hospital Management System</h3>
+            <p>Patient, doctor, and appointment management</p>
+            <div class="project-tags">
+              <span class="tag">JavaFX</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Reports</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge advanced">Advanced</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-train"></i>
+            </div>
+            <h3>Railway Reservation System</h3>
+            <p>Book train tickets and manage reservations</p>
+            <div class="project-tags">
+              <span class="tag">Swing</span>
+              <span class="tag">Database</span>
+              <span class="tag">Seat Allocation</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge advanced">Advanced</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-boxes"></i>
+            </div>
+            <h3>Inventory Management System</h3>
+            <p>Track products, stock levels, and transactions</p>
+            <div class="project-tags">
+              <span class="tag">JavaFX</span>
+              <span class="tag">Barcode</span>
+              <span class="tag">Reports</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-car"></i>
+            </div>
+            <h3>Vehicle Parking System</h3>
+            <p>Manage parking slots and vehicle entries</p>
+            <div class="project-tags">
+              <span class="tag">Swing</span>
+              <span class="tag">Timer</span>
+              <span class="tag">Billing</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-edit"></i>
+            </div>
+            <h3>College Admission Form</h3>
+            <p>Student registration and admission processing</p>
+            <div class="project-tags">
+              <span class="tag">Swing</span>
+              <span class="tag">Validation</span>
+              <span class="tag">File Upload</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge beginner">Beginner</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <h3>Hostel Management System</h3>
+            <p>Manage hostel rooms, students, and facilities</p>
+            <div class="project-tags">
+              <span class="tag">JavaFX</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Room Allocation</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3>Course Registration System</h3>
+            <p>Student course selection and registration</p>
+            <div class="project-tags">
+              <span class="tag">Swing</span>
+              <span class="tag">Database</span>
+              <span class="tag">Validation</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-tint"></i>
+            </div>
+            <h3>Blood Bank Management System</h3>
+            <p>Manage blood inventory and donations</p>
+            <div class="project-tags">
+              <span class="tag">JavaFX</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Blood Groups</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <h3>Expense Tracker</h3>
+            <p>Personal finance management application</p>
+            <div class="project-tags">
+              <span class="tag">Swing</span>
+              <span class="tag">Charts</span>
+              <span class="tag">Categories</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge beginner">Beginner</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h3>Complaint Management System</h3>
+            <p>Track and resolve customer complaints</p>
+            <div class="project-tags">
+              <span class="tag">JavaFX</span>
+              <span class="tag">Status Tracking</span>
+              <span class="tag">Notifications</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mern-projects" class="projects-section" style="display: none">
+      <div class="container">
+        <div class="section-header">
+          <h2><i class="fab fa-react"></i> MERN Stack Projects</h2>
+          <p>Build modern full-stack web applications</p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-tasks"></i>
+            </div>
+            <h3>Task Manager (To-Do App)</h3>
+            <p>Full-stack task management with user authentication</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">MongoDB</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge beginner">Beginner</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <h3>E-Commerce Website</h3>
+            <p>Complete online shopping platform</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Express</span>
+              <span class="tag">Payment Gateway</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge advanced">Advanced</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-share-alt"></i>
+            </div>
+            <h3>Social Media App</h3>
+            <p>Connect with friends and share content</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Socket.io</span>
+              <span class="tag">Real-time</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge advanced">Advanced</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-blog"></i>
+            </div>
+            <h3>Blog Platform</h3>
+            <p>Create, edit, and manage blog posts</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Rich Text Editor</span>
+              <span class="tag">Comments</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <h3>Job Portal</h3>
+            <p>Job posting and application system</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Search</span>
+              <span class="tag">Filters</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-sticky-note"></i>
+            </div>
+            <h3>Notes Taking App</h3>
+            <p>Create and organize notes with categories</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Local Storage</span>
+              <span class="tag">Categories</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge beginner">Beginner</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-user-tie"></i>
+            </div>
+            <h3>Portfolio Website with Admin Panel</h3>
+            <p>Personal portfolio with content management</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Admin Dashboard</span>
+              <span class="tag">CMS</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <h3>Student Portal with Login/Register</h3>
+            <p>Student management with authentication</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">JWT</span>
+              <span class="tag">Authentication</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-comments"></i>
+            </div>
+            <h3>Real-Time Chat App (Socket.io)</h3>
+            <p>Instant messaging with real-time updates</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Socket.io</span>
+              <span class="tag">Real-time</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge advanced">Advanced</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-vote-yea"></i>
+            </div>
+            <h3>Online Voting System</h3>
+            <p>Secure digital voting platform</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Security</span>
+              <span class="tag">Results</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge advanced">Advanced</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-film"></i>
+            </div>
+            <h3>Movie Review Website</h3>
+            <p>Rate and review movies with ratings</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">API Integration</span>
+              <span class="tag">Reviews</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-calendar-alt"></i>
+            </div>
+            <h3>Event Management System</h3>
+            <p>Plan and manage events with registration</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Calendar</span>
+              <span class="tag">Registration</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <h3>Expense Tracker</h3>
+            <p>Track personal and business expenses</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Charts</span>
+              <span class="tag">Categories</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge beginner">Beginner</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-question-circle"></i>
+            </div>
+            <h3>Quiz App with Leaderboard</h3>
+            <p>Interactive quizzes with scoring system</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Timer</span>
+              <span class="tag">Leaderboard</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3>Internship Finder Platform</h3>
+            <p>Find and apply for internships</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Search</span>
+              <span class="tag">Applications</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-user-md"></i>
+            </div>
+            <h3>Doctor Appointment System</h3>
+            <p>Book doctor appointments online</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Calendar</span>
+              <span class="tag">Booking</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-utensils"></i>
+            </div>
+            <h3>Online Food Ordering App</h3>
+            <p>Order food from restaurants online</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Cart</span>
+              <span class="tag">Payment</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge advanced">Advanced</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-car"></i>
+            </div>
+            <h3>Vehicle Booking System</h3>
+            <p>Rent vehicles with booking system</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Availability</span>
+              <span class="tag">Booking</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="python-projects"
+      class="projects-section"
+      style="display: none"
+    >
+      <div class="container">
+        <div class="section-header">
+          <h2><i class="fab fa-python"></i> Python Projects</h2>
+          <p>Explore AI/ML, web development, and automation projects</p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <h3>Student Record System</h3>
+            <p>Manage student information with file handling</p>
+            <div class="project-tags">
+              <span class="tag">File I/O</span>
+              <span class="tag">OOP</span>
+              <span class="tag">CRUD</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge beginner">Beginner</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-cloud-sun"></i>
+            </div>
+            <h3>Weather Forecast App using API</h3>
+            <p>Get weather information for any location</p>
+            <div class="project-tags">
+              <span class="tag">API</span>
+              <span class="tag">Requests</span>
+              <span class="tag">JSON</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge beginner">Beginner</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-tasks"></i>
+            </div>
+            <h3>To-Do List App</h3>
+            <p>Simple task management application</p>
+            <div class="project-tags">
+              <span class="tag">Tkinter</span>
+              <span class="tag">File I/O</span>
+              <span class="tag">GUI</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge beginner">Beginner</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <h3>Expense Tracker</h3>
+            <p>Track personal expenses and income</p>
+            <div class="project-tags">
+              <span class="tag">Tkinter</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">Charts</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-question-circle"></i>
+            </div>
+            <h3>Quiz Application</h3>
+            <p>Interactive quiz with multiple choice questions</p>
+            <div class="project-tags">
+              <span class="tag">Tkinter</span>
+              <span class="tag">Timer</span>
+              <span class="tag">Scoring</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge beginner">Beginner</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3>Chatbot using NLP</h3>
+            <p>Intelligent chatbot with natural language processing</p>
+            <div class="project-tags">
+              <span class="tag">NLTK</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">AI</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge advanced">Advanced</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-key"></i>
+            </div>
+            <h3>Login System with OTP</h3>
+            <p>Secure authentication with OTP verification</p>
+            <div class="project-tags">
+              <span class="tag">Tkinter</span>
+              <span class="tag">Email</span>
+              <span class="tag">Security</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-edit"></i>
+            </div>
+            <h3>Desktop Notepad App</h3>
+            <p>Simple text editor with basic features</p>
+            <div class="project-tags">
+              <span class="tag">Tkinter</span>
+              <span class="tag">File I/O</span>
+              <span class="tag">Text Editor</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge beginner">Beginner</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-image"></i>
+            </div>
+            <h3>Image to Text Converter (OCR)</h3>
+            <p>Extract text from images using OCR</p>
+            <div class="project-tags">
+              <span class="tag">OpenCV</span>
+              <span class="tag">Tesseract</span>
+              <span class="tag">Image Processing</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fab fa-youtube"></i>
+            </div>
+            <h3>YouTube Video Downloader</h3>
+            <p>Download videos from YouTube</p>
+            <div class="project-tags">
+              <span class="tag">yt-dlp</span>
+              <span class="tag">Tkinter</span>
+              <span class="tag">Download</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-lock"></i>
+            </div>
+            <h3>File Encryption/Decryption Tool</h3>
+            <p>Secure file encryption and decryption</p>
+            <div class="project-tags">
+              <span class="tag">Cryptography</span>
+              <span class="tag">Tkinter</span>
+              <span class="tag">Security</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge intermediate">Intermediate</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>Alarm Clock App</h3>
+            <p>Set alarms with sound notifications</p>
+            <div class="project-tags">
+              <span class="tag">Tkinter</span>
+              <span class="tag">Time</span>
+              <span class="tag">Audio</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge beginner">Beginner</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3>College Admission Portal (Flask/Django)</h3>
+            <p>Web-based admission system</p>
+            <div class="project-tags">
+              <span class="tag">Flask/Django</span>
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">Database</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge advanced">Advanced</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-blog"></i>
+            </div>
+            <h3>Blog Website using Django</h3>
+            <p>Full-featured blog platform</p>
+            <div class="project-tags">
+              <span class="tag">Django</span>
+              <span class="tag">User Auth</span>
+              <span class="tag">CRUD</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge advanced">Advanced</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-hospital"></i>
+            </div>
+            <h3>Hospital Management System</h3>
+            <p>Complete hospital management solution</p>
+            <div class="project-tags">
+              <span class="tag">Django</span>
+              <span class="tag">Database</span>
+              <span class="tag">Reports</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge advanced">Advanced</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-user-check"></i>
+            </div>
+            <h3>Attendance System using Face Recognition</h3>
+            <p>Automated attendance with AI</p>
+            <div class="project-tags">
+              <span class="tag">OpenCV</span>
+              <span class="tag">Face Recognition</span>
+              <span class="tag">AI</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge advanced">Advanced</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-car"></i>
+            </div>
+            <h3>Number Plate Detection</h3>
+            <p>Detect and read vehicle number plates</p>
+            <div class="project-tags">
+              <span class="tag">OpenCV</span>
+              <span class="tag">OCR</span>
+              <span class="tag">Image Processing</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge advanced">Advanced</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-mouse"></i>
+            </div>
+            <h3>Virtual Mouse using Hand Gestures</h3>
+            <p>Control mouse with hand movements</p>
+            <div class="project-tags">
+              <span class="tag">OpenCV</span>
+              <span class="tag">MediaPipe</span>
+              <span class="tag">Computer Vision</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge advanced">Advanced</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-keyboard"></i>
+            </div>
+            <h3>Typing Speed Test App</h3>
+            <p>Test and improve typing speed</p>
+            <div class="project-tags">
+              <span class="tag">Tkinter</span>
+              <span class="tag">Timer</span>
+              <span class="tag">WPM</span>
+            </div>
+            <div class="project-difficulty">
+              <span class="difficulty-badge beginner">Beginner</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-section">
+          <h3>Study Hub</h3>
+          <p>Your Gateway to Success in Computer Science</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="../index.html">Home</a>
+          <a href="../quiz/index.html">Quiz Hub</a>
+          <a href="../courese/courses.html">Courses</a>
+          <a href="#">Projects</a>
+        </div>
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <a href="https://t.me/study_group_1918"
+            ><i class="fab fa-telegram"></i> Telegram</a
+          >
+          <a
+            href="https://chat.whatsapp.com/D5X6oFoGxqLAaPlGdrVQ6n?mode=ems_copy_t"
+            ><i class="fab fa-whatsapp"></i> WhatsApp</a
+          >
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2026 Study Hub | Project Ideas Platform</p>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="projects.js"></script>
+  </body>
+</html>

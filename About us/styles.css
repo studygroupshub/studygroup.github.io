@@ -533,6 +533,39 @@ footer a:hover {
     padding: 0 15px;
   }
   
+  /* Header: stack brand, nav, icons */
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 20px;
+    row-gap: 10px;
+  }
+  .logo {
+    font-size: 20px;
+  }
+  /* Hide nav by default on mobile; show when header has .nav-open */
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    margin-top: 6px;
+  }
+  header.nav-open nav {
+    display: flex;
+  }
+  nav a {
+    background: #ffffff;
+    color: #2563eb;
+    padding: 10px 14px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  }
+  .social-icons {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
   h1 {
     font-size: 2rem;
   }
@@ -572,9 +605,47 @@ footer a:hover {
     width: 100%;
     margin: 0 !important;
   }
-  
+}
+
+/* Team grid responsiveness */
+@media (max-width: 1024px) {
+  /* On tablets: 2 columns for team grid */
+  #meet-the-team .grid.grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  /* On small mobile: 1 column for team grid */
+  #meet-the-team .grid.grid-cols-4 {
+    grid-template-columns: 1fr;
+  }
+  .team-card {
+    padding: 20px;
+  }
+  .team-avatar {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* Ensure desktop/tablet keeps horizontal nav */
+@media (min-width: 769px) {
+  header .container {
+    flex-direction: row;
+    align-items: center;
+  }
   nav {
-    display: none;
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+  }
+  nav a {
+    background: transparent;
+    color: white;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
   }
 }
 
@@ -601,3 +672,4 @@ footer a:hover {
     height: 80px;
   }
 }
+

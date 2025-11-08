@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyGroupsHub - Civil Engineering Solved Papers</title>
+    
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- CSS styles are now inside this <style> tag -->
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #777;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--dark-color);
+            font-weight: 500;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .hamburger .line {
+            width: 25px;
+            height: 3px;
+            background-color: var(--dark-color);
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 8rem 0 5rem;
+            text-align: center;
+            margin-top: 68px; /* Offset for fixed navbar */
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Semesters Section */
+        .semesters {
+            padding: 5rem 0;
+            background-color: white;
+        }
+
+        .semesters h2,
+        .question-bank h2,
+        .ai-bot h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2.2rem;
+        }
+
+        .semesters h2::after,
+        .question-bank h2::after,
+        .ai-bot h2::after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 3px;
+            background: var(--secondary-color);
+            bottom: -10px;
+            left: 20%;
+        }
+
+        .semester-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 0 2rem;
+            margin-top: 3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .semester-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .semester-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .semester-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .semester-header h3 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .semester-content {
+            padding: 1.5rem;
+        }
+
+        .subject-list {
+            list-style: none;
+        }
+
+        .subject-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            color: var(--text-light);
+        }
+
+        .subject-list li:last-child {
+            border-bottom: none;
+        }
+
+        .view-btn {
+            display: block;
+            text-align: center;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .view-btn:hover {
+            background-color: #2980b9;
+            color: white;
+        }
+
+        /* Question Bank Section */
+        .question-bank {
+            padding: 5rem 0;
+            background-color: #f9f9f9;
+        }
+
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            display: flex;
+            position: relative;
+            padding: 0 20px;
+        }
+
+        #searchInput {
+            flex: 1;
+            padding: 0.8rem 1.5rem;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        #searchInput:focus {
+            border-color: var(--secondary-color);
+        }
+
+        #searchBtn {
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--text-light);
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        #searchBtn:hover {
+            color: var(--secondary-color);
+        }
+
+        /* UPDATED: .subjects-container is no longer a grid */
+        .subjects-container {
+            padding: 0 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* NEW: This is the new grid container for each semester's subjects */
+        .subjects-grid-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem; /* Space between semester groups */
+        }
+        
+        /* NEW: Style for the semester headings in the question bank */
+        .semester-subheading {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .subject-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .subject-card-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .subject-card-header h4 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .subject-card-body {
+            padding: 1.5rem;
+        }
+
+        .subject-card-body ul {
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+
+        .subject-card-body li {
+            padding: 0.3rem 0;
+            color: var(--text-light);
+        }
+
+        .download-btn {
+            display: block;
+            text-align: center;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: #c0392b;
+            color: white;
+        }
+
+        /* AI Bot Section */
+        .ai-bot {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #f5f7fa, #e4e8f0);
+        }
+
+        .chat-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .chat-messages {
+            height: 400px;
+            overflow-y: auto;
+            padding: 1.5rem;
+            background: #f9f9f9;
+        }
+
+        .message {
+            margin-bottom: 1rem;
+            max-width: 80%;
+            padding: 0.8rem 1.2rem;
+            border-radius: 15px;
+            line-height: 1.4;
+        }
+
+        .user-message {
+            background: var(--secondary-color);
+            color: white;
+            margin-left: auto;
+            border-bottom-right-radius: 5px;
+        }
+
+        .bot-message {
+            background: white;
+            color: var(--text-color);
+            border: 1px solid #eee;
+            border-bottom-left-radius: 5px;
+        }
+
+        .chat-input {
+            display: flex;
+            padding: 1rem;
+            background: white;
+            border-top: 1px solid #eee;
+        }
+
+        #userInput {
+            flex: 1;
+            padding: 0.8rem 1.2rem;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            outline: none;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        #userInput:focus {
+            border-color: var(--secondary-color);
+        }
+
+        #sendBtn {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            margin-left: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #sendBtn:hover {
+            background: #2980b9;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 4rem 0 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 0 5%;
+            margin-bottom: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .footer-section p {
+            margin-bottom: 1rem;
+            color: #bbb;
+            line-height: 1.6;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section ul li a {
+            color: #bbb;
+            transition: color 0.3s ease, padding-left 0.3s ease;
+            display: block;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--secondary-color);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 1.5rem 0;
+            background: rgba(0, 0, 0, 0.1);
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .navbar {
+                padding: 1rem 2rem;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 68px; /* Match navbar height */
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 68px);
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 2rem;
+                transition: all 0.5s ease;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 1rem 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hamburger.active .line:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 6px);
+            }
+
+            .hamburger.active .line:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active .line:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -6px);
+            }
+            
+            .hero {
+                margin-top: 68px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            /* UPDATED: Responsive styles */
+            .semester-grid {
+                grid-template-columns: 1fr;
+                padding: 0 1rem;
+            }
+            .subjects-container {
+                grid-template-columns: none; /* Remove grid */
+                padding: 0 1rem;
+            }
+            .subjects-grid-group {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 7rem 0 4rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-section h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 0.6rem 1.5rem;
+            }
+
+            .semester-card,
+            .subject-card {
+                margin: 0 0.5rem;
+            }
+            
+            /* UPDATED: Responsive styles */
+            .semester-grid {
+                padding: 0 0.5rem;
+            }
+            .subjects-container {
+                 padding: 0; /* Let the group handle padding */
+            }
+            .subjects-grid-group {
+                 padding: 0 0.5rem;
+            }
+
+
+            .chat-messages {
+                height: 300px;
+            }
+
+            .message {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">StudyGroupsHub</div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#semesters">Semesters</a></li>
+            <li><a href="#question-bank">Question Bank</a></li>
+            <li><a href="#bot">AI Bot</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Civil Engineering Solved Papers</h1>
+            <p>Access previous year question papers with solutions for all semesters</p>
+            <a href="#semesters" class="cta-button">Explore Semesters</a>
+        </div>
+    </header>
+
+    <!-- Semesters Section -->
+    <section id="semesters" class="semesters">
+        <h2>Browse by Semester</h2>
+        <div class="semester-grid">
+            <!-- Semester cards will be dynamically generated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Question Bank Section -->
+    <section id="question-bank" class="question-bank">
+        <h2>Question Bank</h2>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search subjects...">
+            <button id="searchBtn"><i class="fas fa-search"></i></button>
+        </div>
+        <!-- This container will now be filled with headings and grids -->
+        <div class="subjects-container" id="subjectsContainer">
+            <!-- Subjects will be populated by JavaScript in a new structure -->
+        </div>
+    </section>
+
+    <!-- AI Bot Section -->
+    <section id="bot" class="ai-bot">
+        <h2>AI Study Assistant</h2>
+        <div class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">Hello! I'm your AI study assistant. How can I help you today?</div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="Ask me anything about your subjects...">
+                <button id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About StudyGroupsHub</h3>
+                <p>Your one-stop solution for academic resources, study materials, and collaborative learning.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#semesters">Semesters</a></li>
+                    <li><a href="#question-bank">Question Bank</a></li>
+                    <li><a href="#bot">AI Bot</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: contact@studygroupshub.com</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 StudyGroupsHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript code is now inside this <script> tag -->
+    <script>
+        // Data for all semesters and subjects
+        const semesterData = {
+            "Semester 1": [
+                "Mathematics – I", "Applied Physics – I", "Applied Chemistry",
+                "Communication Skills in English", "Engineering Graphics",
+                "Engineering Workshop Practice", "Sports & Yoga"
+            ],
+            "Semester 2": [
+                "Mathematics – II", "Applied Physics – II", "Introduction to IT Systems",
+                "Fundamentals of Electrical & Electronics Engineering",
+                "Engineering Mechanics", "Environmental Sciences"
+            ],
+            "Semester 3": [
+                "Construction Materials", "Basic Surveying", "Basic Surveying Lab",
+                "Mechanics of Materials", "Mechanics of Materials Lab",
+                "Building Construction", "Building Planning and Drawings",
+                "Concrete Technology", "Concrete Technology Lab", "Summer Internship"
+            ],
+            "Semester 4": [
+                "Hydraulics", "Hydraulics Lab", "Advanced Surveying",
+                "Advanced Surveying Lab", "Theory of Structures",
+                "Design of RCC Structures", "RCC Drawing", "Water Resource Engineering",
+                "Public Health Engineering", "Essence of Indian Knowledge and Tradition"
+            ],
+            "Semester 5": [
+                "Water and Waste Water Engineering", "Railways, Bridges and Tunnels",
+                "Earthquake Engineering", "Soil Mechanics and Foundation Engineering",
+                "Surveying – II", "Waste Water and Irrigation Engineering Drawing"
+            ],
+            "Semester 6": [
+                "Survey Camp", "Quantity Surveying and Valuation",
+                "Construction Management, Accounts and Entrepreneurship Development",
+                "Design of Steel Structure", "Steel Structure Drawing",
+                "Software Application in Civil Engineering", "Elective", "Project Work"
+            ]
+        };
+
+        // Wait for the DOM to be fully loaded before running scripts
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- 1. Populate Semesters Section ---
+            const semesterGrid = document.querySelector('.semester-grid');
+            if (semesterGrid) {
+                for (const [semester, subjects] of Object.entries(semesterData)) {
+                    const card = document.createElement('div');
+                    card.className = 'semester-card';
+                    
+                    let subjectListHTML = '';
+                    subjects.slice(0, 5).forEach(subject => {
+                        subjectListHTML += `<li>${subject}</li>`;
+                    });
+                    if (subjects.length > 5) {
+                        subjectListHTML += `<li>...and more</li>`;
+                    }
+
+                    card.innerHTML = `
+                        <div class="semester-header">
+                            <h3>${semester}</h3>
+                        </div>
+                        <div class="semester-content">
+                            <ul class="subject-list">
+                                ${subjectListHTML}
+                            </ul>
+                            <a href="#question-bank" class="view-btn">View All Papers</a>
+                        </div>
+                    `;
+                    semesterGrid.appendChild(card);
+                }
+            }
+
+            // Helper function (not used in new QB logic, but could be)
+            const findSemester = (subjectName) => {
+                for (const [semester, subjects] of Object.entries(semesterData)) {
+                    if (subjects.includes(subjectName)) {
+                        return semester.replace('Semester ', ''); // Returns "1", "2", etc.
+                    }
+                }
+                return "N/A";
+            };
+
+            // --- 2. Populate Question Bank Section (UPDATED) ---
+            const subjectsContainer = document.getElementById('subjectsContainer');
+            if (subjectsContainer) {
+                // Iterate over the semesterData object directly
+                for (const [semester, subjects] of Object.entries(semesterData)) {
+                    
+                    // 1. Create the Semester Subheading
+                    const semesterHeading = document.createElement('h3');
+                    semesterHeading.textContent = semester;
+                    semesterHeading.className = 'semester-subheading';
+                    subjectsContainer.appendChild(semesterHeading);
+
+                    // 2. Create the grid container for this semester's subjects
+                    const semesterSubjectGrid = document.createElement('div');
+                    semesterSubjectGrid.className = 'subjects-grid-group';
+
+                    // 3. Create and add all subject cards for this semester
+                    subjects.forEach(subject => {
+                        const item = document.createElement('div');
+                        item.className = 'subject-card'; // Use .subject-card style
+                        
+                        item.innerHTML = `
+                            <div class="subject-card-header">
+                                <h4>${subject}</h4>
+                            </div>
+                            <div class="subject-card-body">
+                                <ul>
+                                    <li>Semester: ${semester.replace('Semester ', '')}</li>
+                                    <li>Type: Solved Paper</li>
+                                </ul>
+                                <a href="#" class="download-btn">Download</a>
+                            </div>
+                        `;
+                        semesterSubjectGrid.appendChild(item); // Add card to this semester's grid
+                    });
+
+                    // 4. Add the populated grid to the main container
+                    subjectsContainer.appendChild(semesterSubjectGrid);
+                }
+            }
+
+            // --- 3. Setup Navbar Hamburger Toggle ---
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    hamburger.classList.toggle('active'); 
+                });
+
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                        hamburger.classList.remove('active'); 
+                    });
+                });
+            }
+
+            // --- 4. Setup Search Functionality (UPDATED) ---
+            const searchInput = document.getElementById('searchInput');
+            const searchBtn = document.getElementById('searchBtn');
+
+            const filterSubjects = () => {
+                const filter = searchInput.value.toLowerCase();
+                // Get all semester headings
+                const semesterHeadings = document.querySelectorAll('.semester-subheading'); 
+                
+                semesterHeadings.forEach(heading => {
+                    // Find the grid group that *follows* this heading
+                    const gridGroup = heading.nextElementSibling; 
+                    
+                    if (gridGroup && gridGroup.classList.contains('subjects-grid-group')) {
+                        let visibleSubjects = 0;
+                        const subjects = gridGroup.querySelectorAll('.subject-card');
+                        
+                        // Filter subjects within this group
+                        subjects.forEach(subject => {
+                            const subjectName = subject.querySelector('.subject-card-header h4').textContent.toLowerCase();
+                            if (subjectName.includes(filter)) {
+                                subject.style.display = 'block'; 
+                                visibleSubjects++;
+                            } else {
+                                subject.style.display = 'none';
+                            }
+                        });
+
+                        // If any subjects are visible, show the heading and grid
+                        if (visibleSubjects > 0) {
+                            heading.style.display = 'block';
+                            gridGroup.style.display = 'grid'; // Show grid
+                        } else {
+                            // Otherwise, hide both
+                            heading.style.display = 'none';
+                            gridGroup.style.display = 'none'; // Hide grid
+                        }
+                    }
+                });
+            };
+
+
+            if (searchInput && searchBtn) {
+                searchInput.addEventListener('keyup', (e) => {
+                    filterSubjects();
+                });
+                searchBtn.addEventListener('click', (e) => {
+                    e.preventDefault(); 
+                    filterSubjects();
+                });
+            }
+
+            // --- 5. Setup AI Bot Chat ---
+            const sendBtn = document.getElementById('sendBtn');
+            const userInput = document.getElementById('userInput');
+            const chatMessages = document.getElementById('chatMessages');
+
+            const addMessage = (text, type) => {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${type}-message`;
+                messageDiv.textContent = text;
+                chatMessages.appendChild(messageDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            };
+
+            const handleChat = () => {
+                const userText = userInput.value.trim();
+                if (userText === '') return;
+
+                addMessage(userText, 'user');
+                userInput.value = '';
+
+                setTimeout(() => {
+                    let botReply = "I'm a simple bot! I can't answer complex questions yet, but thanks for asking!";
+                    if (userText.toLowerCase().includes('hello') || userText.toLowerCase().includes('hi')) {
+                        botReply = "Hi there! How can I help you find a paper?";
+                    } else if (userText.toLowerCase().includes('semester 3')) {
+                        botReply = "Searching for Semester 3 papers... I see subjects like Construction Materials and Basic Surveying.";
+                    } else if (userText.toLowerCase().includes('thanks') || userText.toLowerCase().includes('thank you')) {
+                        botReply = "You're welcome! Let me know if you need anything else.";
+                    }
+                    addMessage(botReply, 'bot');
+                }, 1000);
+            };
+
+            if (sendBtn && userInput && chatMessages) {
+                sendBtn.addEventListener('click', handleChat);
+                userInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        handleChat();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+

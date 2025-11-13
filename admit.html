@@ -71,7 +71,7 @@
         border-bottom: 1px solid #ffffff33;
       }
 
-      /* ===== MAIN CONTAINER ===== */
+      /* ===== MAIN SECTION ===== */
       .container {
         max-width: 600px;
         margin: 50px auto;
@@ -174,13 +174,14 @@
     <!-- ===== NAVIGATION ===== -->
     <div class="navbar">
       <div class="logo">
-        <img src="img/icon.jpg" />
+        <img src="img/icon.jpg" alt="Logo" />
         &nbsp;<strong>StudyGroupsHub</strong>
       </div>
 
       <div class="menu">
         <a href="#">Home</a>
         <a href="#admit">Admit</a>
+        <a href="#verify">Verification</a>
         <a href="#branch">Branch</a>
         <a href="#footer">Contact</a>
       </div>
@@ -190,8 +191,9 @@
 
     <!-- MOBILE MENU DROPDOWN -->
     <div class="mobile-menu" id="mobileMenu">
-      <a href="/index.html">Home</a>
+      <a href="index.html">Home</a>
       <a href="#admit">Admit</a>
+      <a href="#verify">Verification</a>
       <a href="#branch">Branch</a>
       <a href="#footer">Contact</a>
     </div>
@@ -203,6 +205,15 @@
 
       <input type="text" id="enrollInput" placeholder="E233123456" />
       <button onclick="openAdmitCard()">Download Admit Card</button>
+    </div>
+
+    <!-- ===== VERIFICATION CARD SECTION ===== -->
+    <div class="container" id="verify">
+      <h1>📝 BTEUP Verification Card</h1>
+      <p>अपना Enrollment Number दर्ज करें 👇</p>
+
+      <input type="text" id="verifyInput" placeholder="E24XXXXXXX" />
+      <button onclick="openVerifyCard()">Download Verification Card</button>
     </div>
 
     <!-- ===== BRANCH MATERIAL SECTION ===== -->
@@ -239,9 +250,19 @@
         )}`;
         window.open(url, "_blank");
       }
+
+      function openVerifyCard() {
+        let enroll = document.getElementById("verifyInput").value.trim();
+        if (enroll === "") {
+          alert("कृपया अपना Enrollment Number दर्ज करें!");
+          return;
+        }
+        let url = `https://bteup.ac.in/ESeva/Student/VerificationCard.aspx?EnrollNumber=${encodeURIComponent(
+          enroll
+        )}`;
+        window.open(url, "_blank");
+      }
     </script>
   </body>
 </html>
-
-
 
